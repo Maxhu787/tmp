@@ -10,3 +10,6 @@ https://slides.com/sa072686/scist240128
 
 https://open.kattis.com/problems/lyklagangriti
 https://hackmd.io/@sa072686/AtCoder_typical90_bi
+
+int 10^9
+long long 10^18
