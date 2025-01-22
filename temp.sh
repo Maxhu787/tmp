@@ -47,4 +47,14 @@ vtune-gui
 
 squeue -u $USER
 
+ls */*.vtune
+
+vtune-hpc-a/vtune-hpc-a.vtune
 scp "u2427862@140.110.122.196:/home/u2427862/HPC-Winter-Camp-Profiling/*html" .
+
+
+nano ~/.bashrc
+alias sb='sbatch'
+alias sc='scancel'
+alias qq='squeue -u $USER'
+source ~/.bashrc
