@@ -33,7 +33,7 @@ pip3 install numpy
 
 ls -ld RemoveMeToo
 chmod u+x RemoveMeToo
-chmod +w RemoveMeeee
+chmod +w RemoveMeeeec
 
 reset
 option + left click
@@ -42,3 +42,9 @@ option + left click
 export MODULEPATH=$MODULEPATH:$PWD
 source ~/.bashrc
 module load donut
+
+vtune-gui
+
+squeue -u $USER
+
+scp "u2427862@140.110.122.196:/home/u2427862/HPC-Winter-Camp-Profiling/*html" .
