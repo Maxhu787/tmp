@@ -39,6 +39,6 @@ reset
 option + left click
 
 
-export MODULEPATH=$MODULEPATH:/home/u2427862/
+export MODULEPATH=$MODULEPATH:$PWD
 source ~/.bashrc
 module load donut
