@@ -58,3 +58,7 @@ alias sb='sbatch'
 alias sc='scancel'
 alias qq='squeue -u $USER'
 source ~/.bashrc
+
+
+
+rm HPL.dat && nano HPL.dat
