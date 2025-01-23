@@ -29,8 +29,6 @@ conda create --name npy python=3.8
 conda activate npy
 pip3 install numpy
 
-
-
 ls -ld RemoveMeToo
 chmod u+x RemoveMeToo
 chmod +w RemoveMeeeec
@@ -38,20 +36,16 @@ chmod +w RemoveMeeeec
 reset
 option + left click
 
-
 export MODULEPATH=$MODULEPATH:$PWD
 source ~/.bashrc
 module load donut
 
 vtune-gui
 
-squeue -u $USER
-
 ls */*.vtune
 
 vtune-hpc-a/vtune-hpc-a.vtune
 scp "u2427862@140.110.122.196:/home/u2427862/HPC-Winter-Camp-Profiling/*html" .
-
 
 nano ~/.bashrc
 alias sb='sbatch'
@@ -59,6 +53,6 @@ alias sc='scancel'
 alias qq='squeue -u $USER'
 source ~/.bashrc
 
-
-
 rm HPL.dat && nano HPL.dat
+
+https://docs.google.com/presentation/d/1eszPGZRidEEGpRxEL1WeWWNj8mXtNKhyUNygXJq_bFY/edit#slide=id.g327cc0f83d5_0_16

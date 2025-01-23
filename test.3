@@ -1,0 +1,94 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <valarray>
+#include <mpi.h>
+
+void printresult(float *arr, int size, float elapsed_time){
+    /* 
+    printf("ARRAY SIZE : %d\n", chunksize);
+    printf("Result array :\n");
+    for(int i = 0; i < size; i++){
+        printf("%f ", arr[i]);
+    }
+    printf("\n");
+    printf("Elapsed time : %f\n", elapsed_time);
+    */
+}
+
+void quickSort(float *arr, int low, int high){
+    if(low < high){
+        float pivot = arr[high];
+        int i = low - 1;
+        for(int j = low; j <= high - 1; j++){
+            if(arr[j] < pivot){
+                i++;
+                std::swap(arr[i], arr[j]);
+            }
+        }
+        std::swap(arr[i + 1], arr[high]);
+        quickSort(arr, low, i);
+        quickSort(arr, i + 2, high);
+    }
+}
+
+float *merge(float *local, int localsize, float *recv, int recvsize){
+    /* TODO : merge two arrays */ 
+}
+
+int main(int argc, char *argv[]){
+    int rank, size;
+    int ARRAY_SIZE = atoi(argv[1]);
+    char *input_filename = argv[2], *output_filename = argv[3];
+    MPI_File input_file, output_file;
+    float start_time, end_time;
+    
+    MPI_Init(&argc, &argv); 
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank); 
+    MPI_Comm_size(MPI_COMM_WORLD, &size); 
+    
+    if(size & (size - 1)){
+        MPI_Finalize(); 
+        return 0; 
+    } 
+    
+    float *chunk;
+    /* TODO : read a chunk of input to each process */
+    
+    MPI_File_open(MPI_COMM_WORLD, input_filename, MPI_MODE_RDONLY, MPI_INFO_NULL, &input_file);
+    MPI_File_read_at(input_file, sizeof(float) * display, chunk, chunksize, MPI_FLOAT, MPI_STATUS_IGNORE);
+    MPI_File_close(&input_file);
+    
+    // start parallel merge sort
+    start_time = MPI_Wtime();
+    // first, sort the local array before iteration
+    quickSort(chunk, 0, chunksize - 1);
+    
+    int recv_chunksize;
+    float *result;
+    
+    for(int step = 1; step < size; step *= 2){
+        if(rank % (2 * step) != 0){
+            /* TODO : Send the chunksize and chunk to the pair process */
+            break;
+        }
+        float *chunk_received;
+        /* TODO : Recv the chunksize and chunk from the pair process, and allocate space for received chunk */
+        result = merge(chunk, chunksize, chunk_received, recv_chunksize);
+        chunksize += recv_chunksize;
+        free(chunk);
+        free(chunk_received);
+        chunk = result;
+    }
+    
+    end_time = MPI_Wtime();
+    
+    /* TODO : Output the sorted array with MPI-IO
+    MPI_File_open(...)
+    MPI_File_write_at(...)
+    MPI_File_close(...)
+    */
+    
+    if(rank == 0) printresult(chunk, chunksize, end_time - start_time); 
+    MPI_Finalize(); 
+    return 0;
+}
