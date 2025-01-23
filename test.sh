@@ -1,8 +1,8 @@
 #!/bin/bash
 
-initial_ns=11000
-increment=16
-iterations=125
+initial_ns=12600
+increment=4
+iterations=50
 
 orange='\e[34m'
 white='\e[97m'
