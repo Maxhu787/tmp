@@ -11,3 +11,6 @@ https://hackmd.io/@sa072686/AtCoder_typical90_bi
 
 int 10^9
 long long 10^18
+
+https://shengyu7697.github.io/std-sort/
+https://shengyu7697.github.io/std-max/
