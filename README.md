@@ -14,3 +14,6 @@ long long 10^18
 
 https://shengyu7697.github.io/std-sort/
 https://shengyu7697.github.io/std-max/
+
+g++ 14.cpp -std=c++11
+https://shengyu7697.github.io/std-min/
