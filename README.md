@@ -17,3 +17,12 @@ https://shengyu7697.github.io/std-max/
 
 g++ 14.cpp -std=c++11
 https://shengyu7697.github.io/std-min/
+
+#include <utility>
+pairt<int, int>
+
+#include <algorithm>
+find(v.begind(), v.end(), x) != v.end()
+
+#include <climits>
+LLONGMAX
