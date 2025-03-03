@@ -1,14 +1,3 @@
-https://open.kattis.com/problems/successfulzoom
-https://hackmd.io/@sa072686/SCIST_complexity#/15/1
-https://atcoder.jp/contests/typical90/tasks/typical90_ca
-https://hackmd.io/@sa072686/SCIST_complexity#/14/1
-
-https://slides.com/sa072686/scist#/1/25
-https://slides.com/sa072686/scist240128
-
-https://open.kattis.com/problems/lyklagangriti
-https://hackmd.io/@sa072686/AtCoder_typical90_bi
-
 int 10^9
 long long 10^18
 
@@ -26,3 +15,18 @@ find(v.begind(), v.end(), x) != v.end()
 
 #include <climits>
 LLONGMAX
+
+```
+vector<pair<int, int>> vec = {{1, 3}, {2, 1}, {3, 2}};
+sort(vec.begin(), vec.end(), [](pair<int, int> a, pair<int, int> b) {
+  return a.second < b.second;
+});
+```
+
+```
+for (auto p : vec) {
+  cout << "(" << p.first << ", " << p.second << ") ";
+}
+```
+
+sim.cpp
