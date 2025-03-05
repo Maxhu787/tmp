@@ -30,3 +30,7 @@ for (auto p : vec) {
 ```
 
 sim.cpp
+
+https://toj.tfcis.org/oj/pro/781/
+https://toj.tfcis.org/oj/pro/826/
+https://toj.tfcis.org/oj/pro/967/
