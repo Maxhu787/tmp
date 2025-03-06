@@ -34,3 +34,4 @@ sim.cpp
 https://toj.tfcis.org/oj/pro/781/
 https://toj.tfcis.org/oj/pro/826/
 https://toj.tfcis.org/oj/pro/967/
+https://toj.tfcis.org/oj/pro/756/
