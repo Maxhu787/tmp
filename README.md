@@ -29,7 +29,14 @@ for (auto p : vec) {
 }
 ```
 
-sim.cpp
+```
+while(b != 0) {
+  int t = b;
+  b = a % b;
+  a = t;
+}
+cout << a << "\n";
+```
 
 https://toj.tfcis.org/oj/pro/781/
 https://toj.tfcis.org/oj/pro/826/
