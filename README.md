@@ -1,6 +1,8 @@
 int 10^9
 long long 10^18
 
+10^8 / s
+
 https://shengyu7697.github.io/std-sort/
 https://shengyu7697.github.io/std-max/
 
