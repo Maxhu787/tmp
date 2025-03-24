@@ -27,3 +27,9 @@ int main() {
   cout << o << "\n";
   return 0;
 }
+
+/*
+start from index 0, expands to the right until sum is greater then x
+then start shrinking from the left until it is smaller then x, in the process updaiting o
+if while shrinking it gets smaller then x, we increase right
+*/
