@@ -17,7 +17,6 @@ int main() {
   }
   sort(o.begin(), o.end());
 
-  vector<int> change(o.size() + 1);
   int maxP = 0, curr = 0;
   for(int i = 0; i < (int)o.size(); i++) {
     curr += o[i].second;
