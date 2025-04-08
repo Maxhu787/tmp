@@ -53,6 +53,8 @@
     "tuple": "cpp",
     "typeinfo": "cpp",
     "variant": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "fstream": "cpp",
+    "set": "cpp"
   }
 }
