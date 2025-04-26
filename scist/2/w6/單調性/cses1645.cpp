@@ -28,7 +28,6 @@ int main() {
     st.push(i);
   }
 
-
   cout << "\n";
   return 0;
 }

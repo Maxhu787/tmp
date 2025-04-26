@@ -4,13 +4,13 @@ using namespace std;
 #define LOL cin.tie(0); cout.tie(0);
 
 signed main(){
-    OK LOL
-    
-    int a, b;
-    cin >> a >> b;
+  OK LOL
+  
+  int a, b;
+  cin >> a >> b;
 
-    int diff = (b-a + 540) % 360 - 180;
-    if(diff == -180) diff = 180;
-    cout << diff << "\n";
-    return 0;
+  int diff = (b-a + 540) % 360 - 180;
+  if(diff == -180) diff = 180;
+  cout << diff << "\n";
+  return 0;
 }
