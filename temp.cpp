@@ -172,13 +172,13 @@ void solve() {
   cin >> n;
 }
 
-signed main(){
-    OK LOL
-    int t;
-    cin >> t;
-    while(t--) {
-      solve();
-    }   
-    
-    return 0;
+signed main() {
+  OK LOL
+  int t;
+  cin >> t;
+  while(t--) {
+    solve();
+  }   
+  
+  return 0;
 }
