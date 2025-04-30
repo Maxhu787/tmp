@@ -55,6 +55,7 @@
     "variant": "cpp",
     "vector": "cpp",
     "fstream": "cpp",
-    "set": "cpp"
+    "set": "cpp",
+    "unordered_set": "cpp"
   }
 }
