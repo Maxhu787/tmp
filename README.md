@@ -1,43 +1,60 @@
 int 10^9
 long long 10^18
 
-10^8 (6-7) / s
+10^8 / s
 
-https://shengyu7697.github.io/std-sort/
-https://shengyu7697.github.io/std-max/
+g++ a.cpp -std=c++11
 
-g++ 14.cpp -std=c++11
-https://shengyu7697.github.io/std-min/
-
-#include <utility>
-pair<int, int>
-
+```cpp
 #include <algorithm>
 find(v.begind(), v.end(), x) != v.end()
 
 #include <climits>
 LLONGMAX
 
-```
+
+#include <algorithm>
 vector<pair<int, int>> vec = {{1, 3}, {2, 1}, {3, 2}};
-sort(vec.begin(), vec.end(), [](pair<int, int> a, pair<int, int> b) {
+sort(vec.begin(), vec.end(), [](auto a, auto b) {
   return a.second < b.second;
 });
-```
 
-```
-for (auto p : vec) {
-  cout << "(" << p.first << ", " << p.second << ") ";
-}
-```
 
-```
+#include <cstring>
+int a[10];
+memset(a, 0, sizeof(a));
+
+
+#include <cctype>
+tolower, toupper, isalpha
+
+
+#include <algorithm>
+#include <functional>
+vector arr<int> = {4, 5, 8, 3, 7, 1, 2, 6, 10, 9};
+sort(arr, arr+10, greater<int>());
+
+
 while(b != 0) {
   int t = b;
   b = a % b;
   a = t;
 }
 cout << a << "\n";
+
+
+cout << a[i] << " "[i == 0];
+
+
+#include <fstream>
+ifstream input("input.txt");
+ofstream output("output.txt");
+string line;
+while(getline(input, line)) {
+  output << line << "\n";
+}
+input.close();
+output.close();
 ```
 
 https://toj.tfcis.org/oj/pro/781/
@@ -46,5 +63,4 @@ https://toj.tfcis.org/oj/pro/967/
 https://toj.tfcis.org/oj/pro/756/
 
 https://atcoder.jp/contests/abc032/tasks/abc032_c
-
 https://atcoder.jp/contests/abc075/tasks/abc075_b
