@@ -55,6 +55,9 @@ while(getline(input, line)) {
 }
 input.close();
 output.close();
+
+#include <queue>
+priority_queue<int, vector<int>, greater<int> > pq;
 ```
 
 https://toj.tfcis.org/oj/pro/781/
