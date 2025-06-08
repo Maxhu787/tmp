@@ -19,7 +19,7 @@ int main() {
   for(int i = 0; i < h; i++) {
     for(int j = 0; j < w; j++) {
       if(a[i][j]) {
-        cout << "# ";
+        cout << "#";
       } else {
         int o = 0;
         for(int k = 0; k < 8; k++) {
@@ -30,7 +30,7 @@ int main() {
             o++;
           }
         }
-        cout << o << " ";
+        cout << o;
       }
     }
     cout << "\n";
