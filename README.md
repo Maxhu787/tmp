@@ -34,16 +34,22 @@ tolower, toupper, isalpha
 vector arr<int> = {4, 5, 8, 3, 7, 1, 2, 6, 10, 9};
 sort(arr, arr+10, greater<int>());
 
+```
+
+```cpp
 
 while(b != 0) {
-  int t = b;
+  a = b;
   b = a % b;
-  a = t;
 }
-cout << a << "\n";
+return a;
 
+```
 
-cout << a[i] << " "[i == 0];
+```cpp
+
+cout << a[i] << " "[i == n-1];
+// meaning no space when i is n-1
 
 
 #include <fstream>
