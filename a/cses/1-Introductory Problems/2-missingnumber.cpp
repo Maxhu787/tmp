@@ -20,5 +20,3 @@ int main() {
   }
   return 0;
 }
-
-// vector a(n, false)

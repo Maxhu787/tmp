@@ -19,3 +19,6 @@ int main() {
 
     return 0;
 }
+
+// count unique numbers
+// use set to solve
