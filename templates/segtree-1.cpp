@@ -21,13 +21,15 @@ void build(int l, int r, int id = 1) {
 }
 
 int query(int ql, int qr, int l, int r, int id = 1) {
-  if(qr < l || r < ql) return 0;
-  if(ql <= l && r <= qr) return seg[id];
+  if(qr < l || r < ql) return 0; // no overlap
+  if(ql <= l && r <= qr) return seg[id]; // full overlap
   int m = (l+r) / 2;
   return query(ql, qr, l, m, id*2) + query(ql, qr, m+1, r, id*2+1);
+  // partial overlap
 }
 
 void update(int p, int v, int l, int r, int id = 1) {
+  // p: position, v: value
   if(p < l || r < p) return;
   if(l == r) {
     seg[id] = v;
