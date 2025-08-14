@@ -14,7 +14,7 @@ void build(l, r, id=1):
 
 ll query(ql, qr, l, r, id=1)
   if(ql > r or qr < l) return 0;
-  if(ql <= l and qr <= r) // full overlap
+  if(ql <= l and qr >= r) // full overlap
 
   mid = l + r >> 1
   return query(ql, qr, l, mid, id*2) + query(ql, qr, mid+1, r, id*2+1)
