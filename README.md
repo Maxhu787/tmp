@@ -6,6 +6,11 @@ long long 10^18
 g++ a.cpp -std=c++11
 
 ```cpp
+
+for(int mask = 0; mask < (1 << n); mask++)
+  if(mask & (1 << pos))
+
+
 #include <algorithm>
 find(v.begind(), v.end(), x) != v.end()
 
