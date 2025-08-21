@@ -14,7 +14,7 @@ void build(l, r, id=1):
 
 ll query(ql, qr, l, r, id=1)
   if(ql > r or qr < l) return 0;
-  if(ql <= l and qr >= r) // full overlap
+  if(ql <= l and qr >= r) return seg[id]; // full overlap
 
   mid = l + r >> 1
   return query(ql, qr, l, mid, id*2) + query(ql, qr, mid+1, r, id*2+1)
@@ -31,7 +31,7 @@ void update(index, value, l, r, id=1) {
 
 int main() {
   cin n, q;
-  for(0, n-1) cin >> a[i];
+  for(0, n) cin >> a[i];
   build(0, n-1);
 }
 ```
