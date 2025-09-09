@@ -15,6 +15,7 @@ int main() {
     int temp = current;
     while(temp > 0) {
       dp[current] = min(dp[current-(temp%10)]+1, dp[current]);
+      // try subtacting each digit from the number and getting a min
       temp /= 10;
     }
   }
