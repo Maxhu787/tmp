@@ -1,48 +1,46 @@
 #include <iostream>
 #include <algorithm>
-#include <cstring>
 #include <climits>
+#include <cstring>
 using namespace std;
 
 int main() {
   int n, m, k;
   cin >> n >> m >> k;
-  int q[n][m];
+
+  int grid[n][m];
   for(int i = 0; i < n; i++) {
     for(int j = 0; j < m; j++) {
-      cin >> q[i][j];
+      cin >> grid[i][j];
     }
   }
-
-  int o = INT_MAX;
-  for(int i = 0; i < k; i++) {
-    int temp[n][m];
+  int o=INT_MAX;
+  while(k--) {
+    int temp[m][m];
     memset(temp, 0, sizeof(temp));
-    for(int j = 0; j < n; j++) {
-      int c;
-      cin >> c;
-      for(int k = 0; k < m; k++) {
-        temp[c][k] += q[j][k];
+    for(int i = 0; i < n; i++) {
+      int t;
+      cin >> t;
+      for(int j = 0; j < m; j++) {
+        temp[t][j] += grid[i][j];
       }
     }
-
     int oo = 0;
-    for(int j = 0; j < n; j++) {
-      for(int k = 0; k < m; k++) {
-        int curr = temp[j][k];
-        if(j == k) {
-          oo += curr;
-        } else if(curr > 1000) {
-          oo += ((curr - 1000) * 2 + 1000*3);
+    for(int i = 0; i < m; i++) {
+      for(int j = 0; j < m; j++) {
+        if(i == j) {
+          oo += temp[i][j];
         } else {
-          oo += curr * 3;
+          if(temp[i][j] > 1000) {
+            oo += ((temp[i][j]-1000)*2 + 1000*3);
+          } else {
+            oo += temp[i][j]*3;
+          }
         }
       }
     }
-
     o = min(o, oo);
   }
-  
   cout << o << "\n";
   return 0;
 }
