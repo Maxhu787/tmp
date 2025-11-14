@@ -28,3 +28,5 @@ int main() {
   }
   printf("%lld\n",o);
 }
+
+// similar dp slimes
