@@ -53,6 +53,4 @@ count, [can open]
 3
 3
 
-
-
 */
