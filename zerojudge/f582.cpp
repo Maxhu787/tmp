@@ -61,14 +61,6 @@ int main() {
     value[bufa] = s;
   }
 
-  cout << "---\n";
   dfs(top);
-
-  for(int i = 0; i < m; i++) {
-    for(int j = 0; j < 4; j++) {
-      cout << dp[top][i][j] << " ";
-    }
-    cout << "\n";
-  }
   return 0;
 }
