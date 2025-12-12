@@ -72,18 +72,12 @@ int main() {
     value[bufa] = s;
   }
 
-  cout << "---\n";
   for(int i = 0; i < m; i++) {
     dfs(root, i);
   }
   
   int oo = 0;
   for(int i = 0; i < m; i++) {
-    // cout << value[root][i] << ": ";
-    // for(int j = 0; j < 4; j++) {
-    //   cout << dp[root][i][j] << " ";
-    // }
-    // cout << "\n";
     if(value[root][i] == '@') {
       int o = INF;
       for(int j = 0; j < 4; j++) {
@@ -94,18 +88,15 @@ int main() {
         o = min(o, tot);
       }
       oo += o;
-      cout << o << "-\n";
     } else {
       int o = 0;
       for(int c : child[root]) {
-        // if(options[value[c][i]] != options[value[root][i]]) o++;
-        cout << value[c][i] << ", ";
+        if(options[value[c][i]] != options[value[root][i]]) o++;
       }
       oo += o;
-      cout << o << "-\n";
     }
   }
-  // cout << oo << "\n";
+  cout << oo << "\n";
   return 0;
 }
 
